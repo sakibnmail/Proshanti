@@ -1,0 +1,22 @@
+.signup-container {
+    padding-top: 100px; /* adjust as needed */
+}
+
+.form-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 400px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+.btn-custom {
+    background-color: #5da2d5;
+    border-color: #5da2d5;
+}

@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h3 class="mb-3">Appointment Detail</h3>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <p><strong>Patient Name:</strong> {{appointment.user_name}}</p>
+      <p><strong>Start Time:</strong> {{appointment.start_time}}</p>
+      <p><strong>End Time:</strong> {{appointment.end_time}}</p>
+      <p><strong>Description:</strong> {{appointment.description}}</p>
+      <p><strong>Status:</strong> {{appointment.status}}</p>
+      <div *ngIf="appointment.status === 'pending'" class="mt-2">
+        <button class="btn btn-primary" (click)="onAccept()">Accept</button>
+        <button class="btn btn-danger ml-3" (click)="onDecline()">Decline</button>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-secondary" (click)="onGoBack()">Go Back</button>
+  </div>  
+</div>

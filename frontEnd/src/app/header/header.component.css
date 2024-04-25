@@ -1,0 +1,20 @@
+/* header.component.css */
+.header {
+    display: flex;
+    justify-content: center; /* Aligns items horizontally to the center */
+    align-items: center; /* Aligns items vertically to the center */
+    padding: 20px;
+    background-color: #5da2d5; /* Updated color to match .btn-primary */
+    /* border-bottom: 3px solid #90ccf4; */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.header-title {
+    margin: 0;
+    color: #ffffff; /* Keep color as white for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Keep text shadow for depth */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Keep the modern font */
+    letter-spacing: 2px; /* Keep the increased letter spacing for a more stylish look */
+    font-size: 24px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make the title bold */
+}

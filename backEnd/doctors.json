@@ -1,0 +1,44 @@
+[
+  {
+    "username": "tyler_durden",
+    "password": "password1",
+    "name": "Tyler Durden",
+    "specialty": "Psychiatrist",
+    "area_of_Focus": "Depression, Anxiety",
+    "board_certified": "Yes",
+    "rating": 4,
+    "languages_spoken": ["English", "Spanish"],
+    "education": "MD from Johns Hopkins University School of Medicine",
+    "license": "Board-certified Psychiatrist (License Number: 12345)",
+    "treatment_approach": "Integrative approach combining psychotherapy and medication management",
+    "experience_years": 15
+  },
+  {
+    "username": "anton_chigurh",
+    "password": "password2",
+    "name": "Anton Chigurh",
+    "specialty": "Psychologist",
+    "area_of_focus": "Addiction",
+    "board_certified": "Yes",
+    "rating": 3.5,
+    "languages_spoken": ["English", "Mandarin"],
+    "education": "PhD in Clinical Psychology from Stanford University",
+    "license": "Licensed Psychologist in New York (License Number: 54321)",
+    "treatment_approach": "Humanistic approach focusing on empathy and self-actualization",
+    "experience_years": 8
+  },
+  {
+    "username": "hannibal_lecter",
+    "password": "password2",
+    "name": "Hannibal Lecter",
+    "specialty": "Psychiatrist",
+    "area_of_focus": "Trauma, Anxiety",
+    "board_certified": "Yes",
+    "rating": 5,
+    "languages_spoken": ["English", "French"],
+    "education": "MD from Harvard Medical School",
+    "license": "Licensed Psychiatrist in California (License Number: 67890)",
+    "treatment_approach": "Cognitive Behavioral Therapy (CBT) and mindfulness-based techniques",
+    "experience_years": 10
+  }
+]

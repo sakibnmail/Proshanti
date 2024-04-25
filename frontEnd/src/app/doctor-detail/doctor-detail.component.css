@@ -1,0 +1,69 @@
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Override Angular Material styles */
+.mat-form-field {
+  width: 100%; /* Make the form field take up the full width */
+  display: block; /* Make the form field display as a block element */
+}
+
+.mat-form-field .mat-form-field-wrapper {
+  padding-bottom: 0; /* Remove the extra padding at the bottom */
+}
+
+.mat-form-field .mat-form-field-label-wrapper {
+  top: -1.25em; /* Move the label to the top */
+}
+
+.mat-form-field .mat-form-field-infix {
+  border-top: none; /* Remove the border at the top of the input field */
+  padding: 0.75em 0; /* Add some padding to the input field */
+  font-size: 0.875em; /* Make the input field text a bit smaller */
+}
+
+.doctor-card {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.doctor-card .card-title {
+  font-size: 2em;
+  color: #343a40;
+}
+
+.doctor-card .card-text {
+  font-size: 1.2em;
+}
+
+.doctor-card .doctor-detail {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.appointment-card {
+  background-color: #f8f9fa;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.appointment-card .form-title {
+  font-size: 1.5em;
+  color: #343a40;
+}
+
+.appointment-card .form-group {
+  margin-bottom: 20px;
+}
+
+.appointment-card .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.appointment-card .btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

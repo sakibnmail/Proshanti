@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>Welcome, {{doctorName}}</h2>
+  <h3 class="mb-3"><strong>Pending Appointments</strong></h3>
+  <div *ngFor="let appointment of pendingAppointments" class="card mb-3 shadow-sm">
+    <div class="card-body">
+      <p><strong>Name:</strong> {{appointment.user_name}}</p>
+      <p><strong>Description:</strong> {{appointment.description}}</p>
+      <button class="btn btn-primary" routerLink="/appointment-detail/{{appointment.id}}">Details</button>
+    </div>
+  </div>
+
+  <h3 class="mt-5 mb-3"><strong>Accepted Appointments</strong></h3>
+  <div *ngFor="let appointment of acceptedAppointments" class="card mb-3 shadow-sm">
+    <div class="card-body">
+      <p><strong>Name:</strong> {{appointment.user_name}}</p>
+      <p><strong>Description:</strong> {{appointment.description}}</p>
+      <button class="btn btn-primary" routerLink="/appointment-detail/{{appointment.id}}">Details</button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+  </div>
+</div>

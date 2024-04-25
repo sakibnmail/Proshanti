@@ -1,0 +1,30 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div *ngIf="doctors">
+  <div class="d-flex justify-content-end my-4">
+    <button mat-raised-button [ngStyle]="{'background-color': '#5da2d5', 'color': 'white'}" (click)="goToAppointments()">Show Appointments</button>
+  </div>
+  <h2 class="text-center my-4">Doctors Available</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let doctor of doctors">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ doctor.name }}</h5>
+          <p class="card-text">
+            Specialty: {{ doctor.specialty }}<br>
+            Rating: 
+            <span *ngFor="let i of [1,2,3,4,5]">
+              <i class="fa" [ngClass]="{'fa-star': i <= doctor.rating, 'fa-star-half-o': i > doctor.rating && i-1 < doctor.rating, 'fa-star-o': i > doctor.rating}"></i>
+            </span>
+          </p>
+          <button class="btn btn-primary" (click)="goToDoctorDetail(doctor.id)">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+</div>

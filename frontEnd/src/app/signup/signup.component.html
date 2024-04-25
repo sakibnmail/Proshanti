@@ -1,0 +1,20 @@
+<div class="signup-container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <form class="form-container" (submit)="onSignup()">
+                <h2 class="text-center">User Sign Up</h2>
+                <div class="form-group">
+                    <input class="form-control" [(ngModel)]="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" [(ngModel)]="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">Sign Up</button>
+            </form>
+            <p class="text-center text-danger">{{ errorMessage }}</p>
+        </div>
+    </div>
+</div>

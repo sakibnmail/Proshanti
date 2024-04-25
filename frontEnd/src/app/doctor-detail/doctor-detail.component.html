@@ -1,0 +1,84 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div *ngIf="doctor" class="container mt-4">
+  <button class="btn btn-secondary mb-4" (click)="goBack()">Go Back</button>
+  <!-- Doctor Details Card -->
+  <div class="card mb-4 doctor-card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="card-title">{{ doctor.name }}</h2>
+          <p class="card-text">
+            <strong>Specialty: </strong> <span class="doctor-detail">{{ doctor.specialty }}</span><br />
+            <strong>Area of Focus: </strong> <span class="doctor-detail">{{ doctor.area_of_focus }}</span><br />
+            <strong>Board Certified: </strong> <span class="doctor-detail">{{ doctor.board_certified }}</span><br />
+            <strong>Languages Spoken: </strong> <span class="doctor-detail">{{ doctor.languages_spoken.join(', ') }}</span><br />
+            <strong>Education: </strong> <span class="doctor-detail">{{ doctor.education }}</span><br />
+            <strong>License: </strong> <span class="doctor-detail">{{ doctor.license }}</span><br />
+            <strong>Treatment Approach: </strong> <span class="doctor-detail">{{ doctor.treatment_approach }}</span><br />
+            <strong>Years of Experience: </strong> <span class="doctor-detail">{{ doctor.experience_years }}</span><br />
+            <strong>Rating: </strong> 
+            <span *ngFor="let i of [1,2,3,4,5]">
+              <i class="fa" [ngClass]="{'fa-star': i <= doctor.rating, 'fa-star-half-o': i > doctor.rating && i-1 < doctor.rating, 'fa-star-o': i > doctor.rating}"></i>
+            </span><br />
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img [src]="doctor.imagePath" alt="Doctor's profile picture" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointment Booking Card -->
+  <div class="card">
+    <div class="card-body">
+      <!-- Appointment form -->
+      <div class="mt-4">
+        <h3>Book an Appointment</h3>
+        <form (ngSubmit)="onSubmit(appointmentForm)" #appointmentForm="ngForm">
+          <div class="form-group">
+            <mat-form-field appearance="fill">
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker" id="date" class="form-control" name="date" ngModel required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <label for="timeSlot">Time Slot</label>
+            <select
+              id="timeSlot"
+              class="form-control"
+              name="timeSlot"
+              ngModel
+              required
+            >
+              <option *ngFor="let timeSlot of timeSlots" [value]="timeSlot">
+                {{ timeSlot }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              class="form-control"
+              name="description"
+              ngModel
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!appointmentForm.form.valid"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

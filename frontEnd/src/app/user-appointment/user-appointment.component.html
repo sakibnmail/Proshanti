@@ -1,0 +1,22 @@
+<div *ngIf="appointments">
+  <h2 class="text-center my-4">List of Appointments</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let appointment of appointments">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <p class="card-text">
+            Doctor Name: {{ appointment.doctor_name }}<br />
+            Start Time: {{ appointment.start_time }}<br />
+            End Time: {{ appointment.end_time }}<br />
+            Description: {{ appointment.description }}<br />
+            Status: {{ appointment.status }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <button class="btn btn-secondary" (click)="goBack()">Go Back</button>
+</div>

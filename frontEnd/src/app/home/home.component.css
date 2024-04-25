@@ -1,0 +1,10 @@
+.lead {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-custom {
+    background-color: #5da2d5;
+    border-color: #5da2d5;
+}
